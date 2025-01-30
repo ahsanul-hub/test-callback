@@ -117,3 +117,8 @@ func ReceiveCallback(c *fiber.Ctx) error {
 
 	return c.JSON(fiber.Map{"success": true, "message": "Callback received successfully"})
 }
+
+func Hello(c *fiber.Ctx) error {
+	fmt.Println("Hello endpoint reached") // Debug log
+	return c.SendString("Hello, from API 1!")
+}

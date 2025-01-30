@@ -45,6 +45,7 @@ func main() {
 	app.Post("/merchant/callback", handler.MerchantCallback)
 	app.Post("/test-callback", handler.SendCallbackXimpay)
 	app.Post("/receive-callback1", handler.ReceiveCallback)
+	app.Get("/", handler.Hello)
 
 	// Jalankan server
 	app.Listen(":3000")
